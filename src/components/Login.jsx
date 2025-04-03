@@ -1,21 +1,34 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addUser } from '../utils/userSlice'
+import { useNavigate } from 'react-router-dom'
+import {BASE_URL} from '../utils/constant'
 
 const Login = () => {
   // defining the states , always do before the return
   const [emailId, setEmailId]= useState("")
   const [password, setPassword]= useState("")
 
+// we are dispatching to redux store
+const dispatch=useDispatch()
+// navigate
+const navigate= useNavigate()
+
   // We are making a handlelogin function which when click on login button will send the data in backend for login
   // That's why we use axios , which helps in making this request . Its better than fetch.post() since it doesn't require to manually convert into json which fetch needs to do
   const handleLogin= async ()=>{
     try {
-        const res= await axios.post('http://127.0.0.1:5000/login',{
+        const res= await axios.post(BASE_URL+'/login',{
           emailId,
           password
         },{
           withCredentials:true
         })
+          // the data is stored in redux store
+        dispatch(addUser(res.data))
+        // when you click login after that the page will redirect to feed page
+        return navigate('/')
     } catch (error) {
       console.error(error);
       
