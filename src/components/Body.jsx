@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import { BASE_URL } from '../utils/constant'
 import { addUser } from '../utils/userSlice'
+import Footer from './Footer'
 
 const Body = () => {
 const dispatch=useDispatch()
@@ -34,6 +35,7 @@ useEffect(()=>{
       <div>
       <NavBar/>
         <Outlet/>
+        <Footer/>
     </div>
   )
 }

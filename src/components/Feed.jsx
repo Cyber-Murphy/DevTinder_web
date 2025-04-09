@@ -8,7 +8,6 @@ import Usercard from "./Usercard";
 const Feed = () => {
   const dispatch = useDispatch();
   const feed = useSelector((store) => store.feed);
-  console.log( feed);
   
 
   let getFeed = async () => {
@@ -17,7 +16,6 @@ const Feed = () => {
         withCredentials: true,
       });
 
-      console.log('nimit',res);
       dispatch(addFeed(res.data));
     
   } catch (error) {
