@@ -32,11 +32,15 @@ useEffect(()=>{
 },[])
 
   return (
-      <div>
-      <NavBar/>
-        <Outlet/>
-        <Footer/>
+    
+    <div className="min-h-screen flex flex-col"> {/* Makes footer stick to bottom */}
+    <NavBar />
+    <div className="flex-grow">
+      <Outlet />
     </div>
+    <Footer /> 
+  </div>
+
   )
 }
 

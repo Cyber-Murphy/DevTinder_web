@@ -7,8 +7,8 @@ import { BASE_URL } from "../utils/constant";
 
 const Login = () => {
   // defining the states , always do before the return
-  const [emailId, setEmailId] = useState("rahul@gmail.com");
-  const [password, setPassword] = useState("Rahul@123");
+  const [emailId, setEmailId] = useState("elonmusk@gmail.com");
+  const [password, setPassword] = useState("Elon@123");
   //5/4/25 we are making an error handle , when user enter wrong creditionals it will show error
   const [error, setError] = useState("");
 
