@@ -4,6 +4,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "./userSlice";
 import feedReducer from "./feedSlice";
 import connectionReducer from "./connectionSlice"
+import requestReducer from "./requestSlice"
 
 const appStore = configureStore({
   reducer: {
@@ -11,7 +12,9 @@ const appStore = configureStore({
     // coming from feedslice.js
     feed: feedReducer,
     //coming from connectionslice.js
-    connections:connectionReducer
+    connections:connectionReducer,
+    // coming from requestslice.js
+    requests:requestReducer
   },
 });
 
