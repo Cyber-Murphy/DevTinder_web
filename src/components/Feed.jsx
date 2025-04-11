@@ -27,6 +27,11 @@ const Feed = () => {
     getFeed();
   }, []);
 
+  if(!feed) return ;
+
+  if (feed.length<=0) {
+   return <h1 className="text-center text-2xl my-2">No pending request</h1>
+  }
   return(
     // feed && means only loads when feed is not empty
   feed &&  (
