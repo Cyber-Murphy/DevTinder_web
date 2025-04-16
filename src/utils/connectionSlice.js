@@ -12,4 +12,4 @@ const ConnectionSlice=createSlice({
 })
 
 export const {addConnections,removeConnections}=ConnectionSlice.actions
-export default ConnectionSlice.reducer
+export default ConnectionSlice.reducer;

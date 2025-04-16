@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit"
 
 const feedSlice= createSlice({
     name:"feed",
@@ -17,4 +17,4 @@ const feedSlice= createSlice({
 })
 
 export const {addFeed,removeUserFromFeed}= feedSlice.actions
-export default feedSlice.reducer;
+export default feedSlice.reducer
