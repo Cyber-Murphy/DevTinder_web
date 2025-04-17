@@ -32,7 +32,8 @@ const EditProfile = ({ user }) => {
         },
         { withCredentials: true }
       );
-
+      console.log(res.data.data);
+      
       // update the redux store
       dispatch(addUser(res?.data?.data));
       // the alert message will go after 3 seconds
