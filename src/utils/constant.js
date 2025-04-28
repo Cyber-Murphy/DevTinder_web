@@ -6,4 +6,4 @@
 // export const BASE_URL='http://localhost:5000'
 
 // Now this will combine both,if we are using for localhost then this  use otherwise use the production level
-export const BASE_URL=location.hostname==="localhost"? 'http://localhost:5000':"/api"
+export const BASE_URL=location.hostname==="localhost"? 'http://localhost:5000':"https://dev-tinder-1-5st2.onrender.com"
